@@ -52,7 +52,7 @@
             <dependency>
                 <groupId>com.chippy</groupId>
                 <artifactId>springcloud-core-helper</artifactId>
-                <version>2.0</version>
+                <version>${spring-cloud-helper.version}</version>
             </dependency>
 
             <dependency>

@@ -1,6 +1,6 @@
 package com.chippy.springcloudalibaba.rpc;
 
-import com.chippy.springcloudalibaba.common.Result;
+import com.chippy.springcloudalibaba.common.response.Result;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,8 +13,8 @@ import org.springframework.stereotype.Component;
 public class UserFeignClientFallback implements UserFeignClient {
 
     @Override
-    public Result<String> getUserInfo() {
-        return Result.success("降级的用户信息");
+    public Result<String> getUserInfo(String userId) {
+        return Result.success("降级的用户信息 - " + userId);
     }
 
 }

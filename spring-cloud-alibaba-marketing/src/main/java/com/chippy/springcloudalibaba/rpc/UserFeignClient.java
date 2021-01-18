@@ -1,8 +1,9 @@
 package com.chippy.springcloudalibaba.rpc;
 
-import com.chippy.springcloudalibaba.common.Result;
+import com.chippy.springcloudalibaba.common.response.Result;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * user feign client invoker
@@ -14,6 +15,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface UserFeignClient {
 
     @GetMapping("/user/demo/getUserInfo")
-    Result<String> getUserInfo();
+    Result<String> getUserInfo(@RequestParam("userId") String userId);
 
 }

@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>spring-cloud-alibaba-test</artifactId>
+        <artifactId>spring-cloud-alibaba-example</artifactId>
         <groupId>com.chippy</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -14,17 +14,16 @@
     <dependencies>
         <dependency>
             <groupId>com.chippy</groupId>
-            <artifactId>spring-cloud-alibaba-common</artifactId>
+            <artifactId>springcloud-feign-helper</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <groupId>com.chippy</groupId>
+            <artifactId>spring-cloud-alibaba-common</artifactId>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-        <!--   sentinel     -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
@@ -33,21 +32,9 @@
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-datasource-nacos</artifactId>
         </dependency>
-        <!--排除tomcat-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <!--引入undertow-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-undertow</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

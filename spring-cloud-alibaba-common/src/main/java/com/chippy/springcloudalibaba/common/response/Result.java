@@ -1,4 +1,4 @@
-package com.chippy.springcloudalibaba.common;
+package com.chippy.springcloudalibaba.common.response;
 
 import lombok.Data;
 
